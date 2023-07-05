@@ -21,8 +21,8 @@ export const Accordion = (props: Accordion) => {
   // childrenにpropを渡す
   const accordionElement = useMemo(() => {
     return Children.map(children, (child, index) => {
-      if (index > 0 && isValidElement(child)) {
-        return cloneElement(child, { ...newProps }, null)
+      if (isValidElement(child)) {
+        return cloneElement(child, { ...newProps })
       }
       return child
     })
