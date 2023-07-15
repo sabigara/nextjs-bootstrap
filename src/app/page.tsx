@@ -13,7 +13,7 @@ export default function Home() {
                 <Link href="/accordion-sample">アコーディオン</Link>
               </li>
               <li>
-                <Link href="/menu-sample">サイドメニュー</Link>
+                <Link href="/menu-sample/menu-1">サイドメニュー</Link>
               </li>
             </ul>
           </div>
