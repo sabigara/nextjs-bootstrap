@@ -5,7 +5,7 @@ import './index.css';
 export const Index = () => {
   return (
     <LayoutMenu
-      className="menu-2"
+      className="menu-3"
       contents={
         <>
           <div className="pt-3 pb-2 mb-3">
