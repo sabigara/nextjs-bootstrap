@@ -1,6 +1,7 @@
-'use client'
+'use client';
 
 import Link from 'next/link';
+import clsx from 'clsx';
 
 type Props = {
   className?: string;
@@ -18,12 +19,12 @@ export const BaseButton = ({
   onClick,
 }: Props) => {
   return url ? (
-    <Link href={url} className={`btn ${className || ''}`}>
+    <Link href={url} className={clsx('btn', className)}>
       {title}
     </Link>
   ) : (
     <button
-      className={`btn ${className || ''}`}
+      className={clsx('btn', className)}
       type={buttonType}
       onClick={onClick}
     >
