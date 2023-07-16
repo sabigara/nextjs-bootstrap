@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const metadata = {
@@ -11,8 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
-      <body>{children}</body>
-    </html>
+    <>
+      <Script src="/bootstrap.min.js" />
+      <html lang="ja">
+        <body>{children}</body>
+      </html>
+    </>
   );
 }

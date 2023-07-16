@@ -6,11 +6,13 @@ import clsx from 'clsx';
 type Props = {
   className?: string;
   buttonType?: 'button' | 'submit' | 'reset';
-  title?: string;
+  title?: string; // childrenを使うべきです。
   url?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 };
 
+// 無理にbuttonとaタグを統合しないほうがいいと思います。
+// それぞれの要素の役割は全く異なっており、似ているのは見た目だけです。
 export const BaseButton = ({
   className,
   buttonType = 'button',

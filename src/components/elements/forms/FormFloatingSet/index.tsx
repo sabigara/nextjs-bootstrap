@@ -18,8 +18,16 @@ export const FormFloatingSet = ({
       <input
         type={type}
         className="form-control"
+        // name属性がinput要素に存在しているのにidに渡されているのは意図がよくわからないです。
         id={name}
+        // name=""
+
+        // title属性も存在します。
         placeholder={title}
+        // title=""
+        // また、labelとplaceholderは別物なのに同じ値が設定されてしまうのもよくないです。
+        // Bootstrapの実装ではplaceholderが必要ですが、同じ値である必要はないようです。
+
         required={required}
       />
       <label htmlFor={name}>{title}</label>
