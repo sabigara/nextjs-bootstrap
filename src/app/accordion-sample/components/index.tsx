@@ -9,9 +9,8 @@ export const Index = () => {
 
       <p>アコーディオンをコンポーネント化しました。</p>
       <Accordion
-        accordionId="One"
-        header="アコーディオン１"
-        contents={
+        button="アコーディオン１"
+        body={
           <>
             <p>
               テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
@@ -24,9 +23,8 @@ export const Index = () => {
       ></Accordion>
 
       <Accordion
-        accordionId="Two"
-        header="アコーディオン2"
-        contents={
+        button="アコーディオン2"
+        body={
           <>
             <p>
               テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト

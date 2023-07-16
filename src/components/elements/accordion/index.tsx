@@ -1,36 +1,35 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useId } from 'react';
 
-type Accordion = {
+type Props = {
   isBorderNone?: boolean;
-  accordionId: string;
-  header: string;
-  contents: ReactNode;
+  button: ReactNode; // クラス名がaccordion-buttonなので
+  body: ReactNode; // クラス名がaccordion-bodyなので
 };
 
 export const Accordion = ({
   isBorderNone = true,
-  accordionId,
-  header,
-  contents,
-}: Accordion) => {
+  button: header,
+  body: contents,
+}: Props) => {
+  const id = useId(); // idを手動で設定したい理由が特にないのであれば
   return (
     <div className={`accordion ${isBorderNone ? 'accordion-flush' : ''}`}>
-      <h2 className="accordion-header" id={`flush-heading${accordionId}`}>
+      <h2 className="accordion-header">
         <button
           className="accordion-button collapsed"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target={`#flush-collapse${accordionId}`}
+          data-bs-target={`#${id}`}
           aria-expanded="false"
-          aria-controls={`flush-collapse${accordionId}`}
+          aria-controls={id}
         >
           {header}
         </button>
       </h2>
       <div
-        id={`flush-collapse${accordionId}`}
+        id={id}
         className="accordion-collapse collapse"
         aria-labelledby={`flush-heading$s{eventName}`}
       >
