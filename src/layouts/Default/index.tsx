@@ -12,7 +12,7 @@ export const LayoutDefault = ({ children }: Props) => {
     <>
       <LayoutHeader />
       <LayoutWrapper>
-        <LayoutMain contents={children} />
+        <LayoutMain>{children}</LayoutMain>
       </LayoutWrapper>
     </>
   );
