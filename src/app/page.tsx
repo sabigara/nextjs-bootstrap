@@ -15,6 +15,12 @@ export default function Home() {
               <li>
                 <Link href="/menu-sample/menu-1">サイドメニュー</Link>
               </li>
+              <li>
+                <Link href="form-sample/">フォーム</Link>
+              </li>
+              <li>
+                <Link href="form-login/">ログイン</Link>
+              </li>
             </ul>
           </div>
         </div>
